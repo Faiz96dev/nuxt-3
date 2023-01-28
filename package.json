@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
+    "@nuxtjs/device": "^3.0.0",
+    "@unocss/nuxt": "^0.49.1",
+    "nuxt": "^3.1.0",
+    "pug": "^3.0.2"
+  },
+  "dependencies": {
+    "@morev/vue-transitions": "^2.3.6",
+    "@pinia/nuxt": "^0.4.6",
+    "@vueuse/core": "^9.11.1",
+    "vite-plugin-pug": "^0.3.2"
+  }
+}
