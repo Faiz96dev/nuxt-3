@@ -1,5 +1,32 @@
+
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <Html >
+    <Body class="p-[10px] bg-gray-900">
+      <Header/>
+      <StepperComponent/>
+        <NuxtPage />
+    </Body>
+  </Html>
 </template>
+
+<script lang="ts" >
+  
+</script>
+
+<style>
+ h1  {
+  color: white;
+}
+h2{
+  color: white;
+}
+h3{
+  color: white;
+}
+span{
+  color: white;
+}
+p{
+  color: white;
+}
+</style>
