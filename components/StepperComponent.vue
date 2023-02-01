@@ -10,38 +10,39 @@
     </div>
 
     <span
-      >{{ STEPS_PAGES[route.path.replace("/", "")] }}/{{
-        Object.keys(STEPS_PAGES).length
+      >{{ PAGES_HELPER[route.path.replace("/", "")].order }}/{{
+        Object.keys(PAGES_HELPER).length
       }}</span
     >
   </div>
 </template>
 
 <script lang="ts" setup >
-import { STEPS_PAGES } from "@/helpers/stepperHelper.js";
+import { PAGES_HELPER } from "@/helpers/pagesHelper.js";
 const router = useRouter();
 const route = useRoute();
 const getRouteTo = computed(() => {
   // @ts-ignore
-  const currentPageIndex = STEPS_PAGES[route.path.replace("/", "")];
-  return Object.keys(STEPS_PAGES)[currentPageIndex]
-    ? `/${Object.keys(STEPS_PAGES)[currentPageIndex]}`
+  const currentPageIndex = PAGES_HELPER[route.path.replace("/", "")].order;
+  // @ts-ignore
+  return Object.keys(PAGES_HELPER)[currentPageIndex]
+    ? `/${Object.keys(PAGES_HELPER)[currentPageIndex]}`
     : "/";
 });
 function goToPrewPage() {
   // @ts-ignore
-  const currentPageIndex = STEPS_PAGES[route.path.replace("/", "")];
-  const prewPage = Object.keys(STEPS_PAGES)[currentPageIndex - 2];
+  const currentPageIndex = PAGES_HELPER[route.path.replace("/", "")].order;
+  const prewPage = Object.keys(PAGES_HELPER)[currentPageIndex - 2];
   if (prewPage) {
     return router.push(`/${prewPage}`);
   }
   return "/";
 }
 const getWidth = computed(() => {
-  const increaseOn = 100 / Object.keys(STEPS_PAGES).length;
+  const increaseOn = 100 / Object.keys(PAGES_HELPER).length;
   // @ts-ignore
-  return STEPS_PAGES[route.path.replace("/", "")]
-    ? STEPS_PAGES[route.path.replace("/", "")] * increaseOn
+  return PAGES_HELPER[route.path.replace("/", "")]
+    ? PAGES_HELPER[route.path.replace("/", "")].order * increaseOn
     : "/";
 });
 </script>

@@ -4,6 +4,15 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@nuxt/image-edge',
     '@nuxtjs/tailwindcss',
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', 'acceptHMRUpdate'],
+      },
+    ],
   ],
-
+  imports: {
+    dirs: ['stores'],
+  },
+    
 })

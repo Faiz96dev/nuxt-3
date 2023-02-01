@@ -2,7 +2,7 @@
   <div
     class="w-full h-full flex justify-center items-center flex-col aligh-center"
   >
-    <QuizComponent :quize-data="quizeData" />
+    <QuizComponent @cardClick="$processData"  :quize-data="quizeData" />
 
     <div
       class="
@@ -36,6 +36,7 @@
 </template>
 
 <script setup lang="ts">
+const { $processData } = useNuxtApp();
 const quizeData = {
     title: 'Choose your body type',
     lead: 'Choose the one that is most similar to yours now. There are no good or bad body types.',

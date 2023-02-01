@@ -3,13 +3,16 @@
     <div class="h-1/2 flex justify-center w-1/2">
       <nuxt-img class="image" height="600" :src="`/${SLIDER_VALUES[currentActive].value}.webp`" />
     </div>
-    <div class="h-1/2 flex items-center justify-center align-center w-1/2">
+    <div class="h-1/2 flex items-center justify-center flex-col align-center w-1/2">
       <slider-component max="7" min="0"  :initial="3" @sliderChange="handleSlide" />
+      <button-component @click="$processData(SLIDER_VALUES[currentActive].title)" title="Contiune"/>
     </div>
+    <span>{{ SLIDER_VALUES[currentActive].title }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
+const { $processData } = useNuxtApp();
 const currentActive = ref(3)
 const  SLIDER_VALUES = [
   {
@@ -48,7 +51,7 @@ const  SLIDER_VALUES = [
 function handleSlide (val: any){
   currentActive.value = val
 }
-let quizeData = {
+const quizeData = {
   title: "Ok, so your goal is to Lose Weight",
   lead: "Choose the body you want",
   cards: [

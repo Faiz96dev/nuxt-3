@@ -8,7 +8,7 @@
       <h3>{{ quizeData.title }}</h3>
     </div>
     <div v-if="quizeData.cards"  class="flex flex-col align-center w-full items-center justify-center">
-      <div @click="handleCardClick(card)"  v-for="(card, index) in quizeData.cards" :key="index">
+      <div @click="$emit('cardClick', card)"  v-for="(card, index) in quizeData.cards" :key="index">
         <AppCard
         :cardData="card"
       />
