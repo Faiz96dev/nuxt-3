@@ -3,5 +3,5 @@ const router = useRouter()
 onMounted(()=>{
 router.push('/step-goal')
 })
-mixins [dataProcessorMixin]
+// mixins [dataProcessorMixin]
 </script>
