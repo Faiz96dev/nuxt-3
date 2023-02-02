@@ -3,8 +3,7 @@
     <div @click="goToPrewPage" class="bg-gray-500 cursor-pointer p-[5px]">
       <nuxt-img height="10" src="left-arrow.png" />
     </div>
-    <nuxt-link class="text-white" :to="getRouteTo">NEXT</nuxt-link>
-
+    <!-- <nuxt-link class="text-white" :to="getRouteTo">NEXT</nuxt-link> -->
     <div class="border-[1px] w-full border-gray-500 mx-[15px]">
       <div class="h-[8px] bg-red-500" :style="`width: ${getWidth}%`"></div>
     </div>

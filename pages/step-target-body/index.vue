@@ -7,17 +7,21 @@
 <script setup lang="ts">
 const { $processData } = useNuxtApp();
 let quizeData = {
-  title: "Ok, so your goal is to Lose Weight",
+  title: "",
   lead: "Choose the body you want",
   cards: [
     {
-      title: "Slim body ",
-      img: "https://www.healthyfood.com/wp-content/uploads/2019/04/lose-weight.jpg",
+      title: "Athletic",
+      img: "image3.webp",
     },
     {
-      title: "Slim, shredded body ",
-      img: "https://www.healthyfood.com/wp-content/uploads/2019/04/lose-weight.jpg",
+      title: "Hero",
+      img: "image24.webp",
     },
+    {
+      title: "Bodybuilder",
+      img: "image25.webp",
+    }
   ],
 };
 </script>

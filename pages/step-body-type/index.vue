@@ -43,15 +43,15 @@ const quizeData = {
     cards:[
         {
             title: 'Ectomorph', 
-            img: 'https://www.healthyfood.com/wp-content/uploads/2019/04/lose-weight.jpg'
+            img: 'ecto.webp'
         },
         {
             title: 'Mesomorph ',
-            img: 'https://www.healthyfood.com/wp-content/uploads/2019/04/lose-weight.jpg'
+            img: 'meso.webp'
         },
         {
             title: 'Endomorph ',
-            img: 'https://www.healthyfood.com/wp-content/uploads/2019/04/lose-weight.jpg'
+            img: 'endo.webp'
         }
     ]
 }

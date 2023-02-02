@@ -5,12 +5,15 @@ import { Configuration, OpenAIApi } from 'openai'
 export const useDataCombiner = defineStore('dataProcessor', {
   state: (): any => ({
     combinedData: {},
+    output: '',
+    loading: false,
   }),
   actions: {
     addData(data: any,) {
       this.combinedData = { ...this.combinedData, ...data }
     },
    async combineDataInPrompt() {
+    this.loading = true
      let data = this.combinedData
       const reqPrompt = `
       You are my professional personal trainer in gym.
@@ -34,20 +37,22 @@ export const useDataCombiner = defineStore('dataProcessor', {
   time to spend in gym: 1 hour
   per day i drink 3 liters of water
   i ready spend 2 hours per day for prepering meal 
-  my age is 30
+  my age is 26
       `
       console.log('reqPrompt', reqPrompt);
-      // const configuration = new Configuration({
-      //   apiKey: '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',
-      // });
-      // const openai = new OpenAIApi(configuration);
+      const configuration = new Configuration({
+        apiKey: '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',
+      });
+      const openai = new OpenAIApi(configuration);
       
-      // const completion = await openai.createCompletion({
-      //   model: "text-davinci-003",
-      //   prompt: reqPrompt,
-      //   max_tokens: 1500,
-      // });
-      // console.log(completion.data.choices[0].text)
+      const completion = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: reqPrompt,
+        max_tokens: 800,
+      });
+      console.log(completion.data.choices[0].text)
+      this.output = completion.data.choices[0].text
+      this.loading = false
     }
   },
 })

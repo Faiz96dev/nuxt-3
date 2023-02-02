@@ -23,7 +23,8 @@ export default defineNuxtPlugin(() => {
       processData(data: any) {
         store.addData({[currentPage.value.key]: data.title ? data.title : data})
         if(!getRouteTo.value) {
-         return  store.combineDataInPrompt()
+         return router.push('/result')
+          // store.combineDataInPrompt()
         }
         router.push(getRouteTo.value)
       }

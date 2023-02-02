@@ -1,7 +1,7 @@
 
 <template>
   <div class="flex flex-col items-center">
-    <div class="flex-col pr-[144px] pt-[55px]">
+    <div class="flex-col mb-[30px] ">
       <h2>BUILD YOUR PERFECT BODY</h2>
       <h3>Get a personalized workout program</h3>
     </div>
@@ -18,16 +18,16 @@ const quizeData = {
   title: "Choose your goal",
   cards: [
     {
-      title: "loose weight",
-      img: "https://www.healthyfood.com/wp-content/uploads/2019/04/lose-weight.jpg",
+      title: "Loose Weight",
+      img: "image26.webp",
     },
     {
-      title: "gain Muscle Mass",
-      img: "https://www.healthyfood.com/wp-content/uploads/2019/04/lose-weight.jpg",
+      title: "Gain Muscle Mass",
+      img: "image23.webp",
     },
     {
       title: "Get Shredded",
-      img: "https://www.healthyfood.com/wp-content/uploads/2019/04/lose-weight.jpg",
+      img: "image27.webp",
     },
   ],
 };

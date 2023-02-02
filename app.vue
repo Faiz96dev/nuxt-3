@@ -3,7 +3,7 @@
   <Html >
     <Body class="p-[10px] bg-gray-900">
       <Header/>
-      <StepperComponent/>
+      <StepperComponent class="mb-[50px]"/>
         <NuxtPage />
     </Body>
   </Html>
