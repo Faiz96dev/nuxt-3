@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: true,
   modules: [
     '@nuxtjs/device',
     '@nuxt/image-edge',
@@ -14,5 +15,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores'],
   },
+  image: {
+    dir: 'static/',
+},
     
 })
