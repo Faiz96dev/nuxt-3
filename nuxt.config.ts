@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
+  target: 'static',
   modules: [
     '@nuxtjs/device',
     '@nuxt/image-edge',
