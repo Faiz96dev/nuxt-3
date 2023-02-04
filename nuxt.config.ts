@@ -15,8 +15,4 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores'],
   },
-  image: {
-    dir: 'assets/',
-},
-    
 })
