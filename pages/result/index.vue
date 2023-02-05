@@ -3,9 +3,13 @@
   <div
     class="w-full h-full flex justify-center items-center flex-col aligh-center"
   >
-  <span v-if="!store.loading" class="w-1/2 mt-[20px]">
-    {{store.output}}
-  </span>
+  <div v-if="!store.loading" class="w-1/2 flex justify-center align-center mt-[20px]">
+    <div class="text-white" >
+      <h3>Your program:</h3>
+      
+
+    </div>
+  </div>
   <LoaderComponent class="mt-[150px]" v-if="store.loading"/>
   </div>
 </template>

@@ -1,10 +1,11 @@
 
 <template>
-  <Html >
-    <Body class="p-[10px] bg-gray-900">
+  <Html class="h-full" >
+    <Body class="p-[10px] bg-gray-900 h-full">
       <Header/>
       <StepperComponent class="mb-[50px]"/>
-        <NuxtPage />
+        <NuxtPage class="h-full" />
+      <Footer/>
     </Body>
   </Html>
 </template>
