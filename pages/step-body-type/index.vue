@@ -15,7 +15,7 @@
     >
       <div class="flex justify-around">
         <h3 class="">Test to determine your body type</h3>
-        <nuxt-img height="10" src="hand.svg" />
+        <img  class="h-[10px]" src="@/assets/hand.svg" />
       </div>
       <p class="my-[15px]">
         Grip your opposite wrist using the thumb and an index finger. If you’re

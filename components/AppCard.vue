@@ -18,7 +18,7 @@
     "
   >
     <span>{{ props.cardData.title }}</span>
-      <nuxt-img  height="150" :src="`/${props.cardData.img}`" />
+      <img  class="h-[150px]" :src="`@/assets/${props.cardData.img}`" />
   </div>
 </template>
 
