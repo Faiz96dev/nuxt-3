@@ -6,7 +6,7 @@
   <div v-if="!store.loading" class="w-1/2 flex justify-center align-center mt-[20px]">
     <div class="text-white" >
       <h3>Your program:</h3>
-      
+      <div v-html="store.output"></div>
 
     </div>
   </div>

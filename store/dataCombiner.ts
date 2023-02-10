@@ -12,9 +12,9 @@ export const useDataCombiner = defineStore('dataProcessor', {
     addData(data: any,) {
       this.combinedData = { ...this.combinedData, ...data }
     },
-   async combineDataInPrompt() {
-    this.loading = true
-     let data = this.combinedData
+    async combineDataInPrompt() {
+      this.loading = true
+      let data = this.combinedData
       const reqPrompt = `
       You are my professional personal trainer in gym.
       Your task is create program for train with diet.
@@ -36,7 +36,7 @@ export const useDataCombiner = defineStore('dataProcessor', {
   time to spend in gym: 1 hour
   per day i drink 3 liters of water
   i ready spend 2 hours per day for prepering meal 
-  my age is 26.
+  my age is ${data.age}.
   Form the program in html tags so that I can use it on the site.
       `
       console.log('reqPrompt', reqPrompt);
@@ -44,7 +44,7 @@ export const useDataCombiner = defineStore('dataProcessor', {
         apiKey: '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',
       });
       const openai = new OpenAIApi(configuration);
-      
+
       const completion = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: reqPrompt,

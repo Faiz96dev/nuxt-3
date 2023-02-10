@@ -1,8 +1,9 @@
 export const PAGES_HELPER = {
-    ['step-goal']: {order: 1, key: 'goal' },
-    ['step-target-body']: {order: 2, key: 'targetBody' },
-    ['step-body-type']: {order: 3, key: 'bodyType' },
-    ['step-level-of-fat']: {order: 4, key: 'bodyFat' }
+    ['step-age']: {order: 1, key: 'age' },
+    ['step-goal']: {order: 2, key: 'goal' },
+    ['step-target-body']: {order: 3, key: 'targetBody' },
+    ['step-body-type']: {order: 4, key: 'bodyType' },
+    ['step-level-of-fat']: {order: 5, key: 'bodyFat' }
     // ['step-problem-areas']: {order: 5, key: 'currentProblemAreas' },
     // ['step-measures']: {order: 6, key: 'measures' },
     // ['step-target-weight']: {order: 7, key: 'targetWeight' },
