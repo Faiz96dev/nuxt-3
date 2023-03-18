@@ -2,9 +2,6 @@
 export default defineNuxtConfig({
   ssr: false,
   target: 'static',
-  alias:{
-    assets: "/<rootDir>/assets"
-  },
   modules: [
     '@nuxtjs/device',
     '@nuxt/image-edge',

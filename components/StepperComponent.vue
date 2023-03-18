@@ -1,7 +1,7 @@
 <template>
   <div v-if="pageExists" class="w-full flex align-center items-center justify-center mt-[15px]">
     <div @click="goToPrewPage" class="bg-gray-500 cursor-pointer p-[5px]">
-      <img src="@/assets/left-arrow.png" class="h-[10px]" alt="">
+      <img src="~/assets/left-arrow.png" class="h-[10px]" alt="">
     </div>
     <!-- <nuxt-link class="text-white" :to="getRouteTo">NEXT</nuxt-link> -->
     <div class="border-[1px] w-full border-gray-500 mx-[15px]">

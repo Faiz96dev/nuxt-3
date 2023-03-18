@@ -17,18 +17,25 @@
       relative
     "
   >
-    <span>{{ props.cardData.title }}</span>
-      <img  class="h-[150px]" :src="`@/assets/${props.cardData.img}`" />
+    <ImageView class="h-[150px]"  :src="`/${props.cardData.img}.svg`"
+  alt="efef"/>
+   <span>{{ props.cardData.title }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+import { useAsset } from '~/helpers/appHelper';
 let props = defineProps({
   cardData: {
     type: Object,
     required: true,
   },
 });
+
+
+const path = 'image25.webp'
+
   function handleHover() {
     // console.log("hover", props.cardData);
   }
